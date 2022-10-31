@@ -5,6 +5,10 @@
     letter-spacing: 1.5px;
   }
 
+  a{
+    text-decoration: none;
+  }
+
   .main{
     display: flex;
     flex-direction: column;
@@ -84,9 +88,18 @@
   }
 
   /* Home Section */
-  .home-section-title{
+  #home-section-title{
     margin: 6rem;
     color: #d0b88e;
 
     font-size: 4.5rem;
+  }
+
+  /* Ride Page */
+
+  #ride-title{
+    font-size: 4rem;
+    text-align: center;
+
+    color: Black;
   }

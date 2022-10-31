@@ -8,7 +8,7 @@ const Home = () => {
       <section className="banner">
         <Banner />
       </section>
-      <h1 className="home-section-title">Featured Ride</h1>
+      <h1 id="home-section-title">Featured Ride</h1>
       <section>
         <Link to={`/ride`}>
           <Ride />
