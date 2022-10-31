@@ -1,5 +1,4 @@
-const Ride = require('../models/Ride')
-const Ticket = require('../models/Ticket')
+const { Ticket, Ride } = require('../models')
 
 /// cruds go here
 //create

@@ -2,6 +2,7 @@ const PORT = process.env.PORT || 3001
 const cors = require('cors')
 const express = require('express')
 const logger = require('morgan')
+const routes = require('./routes')
 
 const db = require('./db')
 const { Ride, Ticket } = require('./models')
@@ -12,19 +13,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use(logger('dev'))
-// create ride
-app.post('/rides', async (req, res) => {
-  let createdRide = await Ride.create(req.body)
-  res.json(createdRide)
-})
 
-// read all rides
-app.get('/rides', async (req, res) => {
-  let allRides = await Ride.find({})
-  res.json(allRides)
-})
+app.use('/', routes)
 
-// read single ride
 app.get('/rides/:id', async (req, res) => {
   let selectedRide = await Ride.findById(req.params.id)
   res.json(selectedRide)
@@ -74,6 +65,8 @@ app.delete('/tickets/:id', async (req, res) => {
   let deletedTicket = await Ticket.findByIdAndDelete(req.params.id)
   res.json(deletedTicket)
 })
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port : ${PORT}`)
