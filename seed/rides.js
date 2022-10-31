@@ -22,12 +22,12 @@ const main = async () => {
       ticket_sales: 30
     },
     {
-      name: 'Skull Island: Reign of Kong',
+      name: 'X²',
       description:
-        'Brave the dangers of a mysterious island where few have dared to venture. On your treacherous jungle expedition, prehistoric predators and vile creatures attack from all sides. Just as all seems lost, the most colossal ape ever to walk the Earth hurls himself between you and certain doom. Is he your hero or the ultimate foe?',
+        'Get ready to enter an all-new realm on X2, a trail-blazing fifth dimension roller coaster. With its 360-degree rotating seats and head-first, face down drops, X has been one of the most popular thrill rides on the planet. On ordinary roller coasters, the train stays in line with the track… but there is nothing ordinary about X2. Go ahead and take in the view on the long ride up, 200 feet in the air.  Enjoy the groundbreaking use of music, sound effects, and fire that have been carefully designed to heighten your total sensory overload. X2’s utterly innovative design will keep your mind in full thrust the entire time.',
       images:
-        'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.iomgeek.com%2Fwp-content%2Fuploads%2F2016%2F08%2FThe-Incredible-Hulk-Coaster_8.jpg&f=1&nofb=1&ipt=91499b639ead8138226b2f999eae6b3860a74c0ce844d2622e117c1ff866410f&ipo=images',
-      ticket_sales: 20
+        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffarm3.staticflickr.com%2F2686%2F4472101181_e69b7c1f2f_o.jpg&f=1&nofb=1&ipt=dd9fe5ebddaf79439364a0525d97bf5e81164bb11689ddfcba566d3ad803b987&ipo=images',
+      ticket_sales: 10
     },
     {
       name: 'Skull Island: Reign of Kong',
