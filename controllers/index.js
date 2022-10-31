@@ -35,9 +35,46 @@ const deleteRide = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+/// ticket cruds
+
+const createTicket = async (req, res) => {
+  try {
+    const ticket = await new Ticket(req.body)
+    await ticket.save()
+    return res.status(201).json({
+      ticket
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+const getAllTickets = async (req, res) => {
+  try {
+    const tickets = await Ticket.find()
+    return res.status(200).json({ tickets })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteTicket = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Ride.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Ticket deleted')
+    }
+    throw new Error('Ride not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
 
 module.exports = {
   createRide,
   getAllRides,
-  deleteRide
+  deleteRide,
+  createTicket,
+  getAllTickets,
+  deleteTicket
 }
