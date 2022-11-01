@@ -27,9 +27,6 @@ const Ride = () => {
         <Link to={`/ride/${id}`}>
           {selectedRide && <SelectedRide ride={selectedRide} />}
         </Link>
-        <Link to={'/tickets'}>
-          <button type="button">To Tickets:</button>
-        </Link>
       </section>
     </div>
   )
