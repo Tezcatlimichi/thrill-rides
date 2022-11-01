@@ -8,7 +8,14 @@ const rideSchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
-    images: [{ type: String, required: true }],
+    image1: { type: String, required: true },
+    image2: { type: String, required: true },
+    image3: { type: String, required: true },
+    height: { type: String, required: true },
+    companion: { type: String, required: true },
+    ride_type: { type: String, required: true },
+    best_for: { type: String, required: true },
+    accessibility: { type: String, required: true },
     ticket_sales: { type: Number, required: true }
   },
   { timestamps: true }

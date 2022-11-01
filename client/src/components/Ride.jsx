@@ -13,6 +13,11 @@ const Ride = (props) => {
           <h1 id="ride-name" className="font-1">
             {props.ride.name}
           </h1>
+          <h3>Height: {props.ride.height}</h3>
+          <h3>Companion: {props.ride.companion}</h3>
+          <h3>Ride type: {props.ride.ride_type}</h3>
+          <h3>Best For: {props.ride.best_for}</h3>
+          <h3>Accessibility: {props.ride.accessibility}</h3>
           <Link to={'/tickets'}>
             <button type="button" id="get-ticket-button">
               Get Tickets
