@@ -4,6 +4,8 @@ import Ticket from '../pages/Ticket'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SelectedRide from '../components/Ride'
+import Ticket from '../pages/Ticket'
 import axios from 'axios'
 const BASE_URL = '/'
 
@@ -17,7 +19,7 @@ const Ride = () => {
       setSelectedRide(response.data)
     }
     apiCall()
-  })
+  }, [])
 
   return (
     <div>
