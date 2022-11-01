@@ -5,19 +5,20 @@ import { useEffect, useState } from 'react'
 import Banner from '../components/Banner'
 import Featured from '../components/Featured'
 
-const BASE_URL = '/api'
+const BASE_URL = '/'
 
 const Home = () => {
   const [rides, setRides] = useState([])
 
   useEffect(() => {
     const getRides = async () => {
-      const response = await axios.get(`${BASE_URL}/`)
-      setRides(response.data)
+      const response = await axios.get(`${BASE_URL}rides`)
+      setRides(response.data.rides)
+      console.log(response.data)
     }
 
     getRides()
-  })
+  }, [])
 
   return (
     <div className="main">
