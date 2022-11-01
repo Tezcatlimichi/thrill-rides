@@ -1,4 +1,5 @@
 const db = require('../db')
+
 const { Ride } = require('../models')
 
 // Connect to the database
