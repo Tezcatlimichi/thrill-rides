@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Nav from './components/Nav'
 import Rides from './pages/AllRides'
 import Ride from './pages/Ride'
+import Ticket from './pages/Ticket'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/ride/:id" element={<Ride />} />
           <Route path="/rides" element={<Rides />} />
+          <Route path="/tickets" element={<Ticket />} />
         </Routes>
       </main>
     </div>

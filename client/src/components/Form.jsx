@@ -1,18 +1,25 @@
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 
 const Form = (props) => {
-  const { id } = useParams()
-
-  let initialState = {
-    ride_name: props.name, //placeholder
-    ride_id: id,
-    price: props.price,
-    quantity: 0,
-    effective_date: '',
-    reserved_by: ''
-  }
+  console.log(props)
+  let initialState = props.ticket_info
+    ? {
+        ride_name: props.ticket_info.rideName,
+        ride_id: props.ticket_info.rideId,
+        price: props.ticket_info.price,
+        quantity: 0,
+        effective_date: '',
+        reserved_by: ''
+      }
+    : {
+        ride_name: '',
+        ride_id: '',
+        price: '',
+        quantity: 0,
+        effective_date: '',
+        reserved_by: ''
+      }
 
   const [formState, setFormState] = useState(initialState)
 
@@ -23,9 +30,6 @@ const Form = (props) => {
       props.setFormToggle(false)
     } else if (props.action === 'update') {
       await axios.put(`/tickets/${props.id}`, formState)
-      props.setFormToggle(false)
-    } else {
-      //delete
       props.setFormToggle(false)
     }
   }
