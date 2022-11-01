@@ -16,56 +16,6 @@ app.use(logger('dev'))
 
 app.use('/', routes)
 
-app.get('/rides/:id', async (req, res) => {
-  let selectedRide = await Ride.findById(req.params.id)
-  res.json(selectedRide)
-})
-
-//post-update ride
-app.put('/rides/:id', async (req, res) => {
-  let updateRide = await Ride.findByIdAndUpdate(req.params.id, req.body, {
-    new: true
-  })
-  res.json(updateRide)
-})
-
-//delete ride
-app.delete('/rides/:id', async (req, res) => {
-  let deletedRide = await Ride.findByIdAndDelete(req.params.id)
-  res.json(deletedRide)
-})
-/// tickets
-//create tickets
-app.post('/tickets/:id', async (req, res) => {
-  const requestBody = { ...req.body }
-  let createdTicket = await Ticket.create(req.params.id, requestBody)
-  res.json(createdTicket)
-})
-//read tickets
-app.get('/tickets', async (req, res) => {
-  let allTickets = await Ticket.find({})
-  res.json(allTickets)
-})
-//read ticket
-app.get('/tickets/:id', async (req, res) => {
-  let selectedTicket = await Ticket.findById(req.params.id)
-  res.json(selectedTicket)
-})
-//update ticket
-
-app.put('/tickets/:id', async (req, res) => {
-  let updateTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, {
-    new: true
-  })
-  res.json(updateTicket)
-})
-
-//delete ticket
-app.delete('/tickets/:id', async (req, res) => {
-  let deletedTicket = await Ticket.findByIdAndDelete(req.params.id)
-  res.json(deletedTicket)
-})
-
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.listen(PORT, () => {

@@ -1,7 +1,7 @@
 const { Ticket, Ride } = require('../models')
 
 /// cruds go here
-//create
+//create ride
 const createRide = async (req, res) => {
   try {
     const ride = await new Ride(req.body)
@@ -13,7 +13,7 @@ const createRide = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
-//get or read
+//get or read ride
 const getAllRides = async (req, res) => {
   try {
     const rides = await Ride.find()
@@ -28,7 +28,15 @@ const getRide = async (req, res) => {
   let selectedRide = await Ride.findById(req.params.id)
   res.json(selectedRide)
 }
-// delete
+
+//update ride
+const updateRide = async (req, res) => {
+  let updateRide = await Ride.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
+  res.json(updateRide)
+}
+// delete ride
 const deleteRide = async (req, res) => {
   try {
     const { id } = req.params
@@ -42,7 +50,7 @@ const deleteRide = async (req, res) => {
   }
 }
 /// ticket cruds
-
+// create ride
 const createTicket = async (req, res) => {
   try {
     const ticket = await new Ticket(req.body)
@@ -54,6 +62,7 @@ const createTicket = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
+//read all rides
 const getAllTickets = async (req, res) => {
   try {
     const tickets = await Ticket.find()
@@ -62,11 +71,20 @@ const getAllTickets = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
-// get single ticket
+// get  or read single ticket
 const getTicket = async (req, res) => {
   let selectedTicket = await Ticket.findById(req.params.id)
   res.json(selectedTicket)
 }
+
+//update ticket
+const updateTicket = async (req, res) => {
+  let updateTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  })
+  res.json(updateTicket)
+}
+// delete ticket
 const deleteTicket = async (req, res) => {
   try {
     const { id } = req.params
@@ -88,5 +106,7 @@ module.exports = {
   getAllTickets,
   deleteTicket,
   getRide,
-  getTicket
+  getTicket,
+  updateRide,
+  updateTicket
 }
