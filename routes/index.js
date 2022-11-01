@@ -21,7 +21,7 @@ router.post('/tickets', controllers.createTicket)
 router.get('/tickets', controllers.getAllTickets)
 //read single ticket
 router.get('tickets/:id', controllers.getTicket)
-//update ticket
+//update tickett
 router.put('tickets/:id', controllers.updateTicket)
 //delete ticket
 router.delete('/tickets/:id', controllers.deleteTicket)
