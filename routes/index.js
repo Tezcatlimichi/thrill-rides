@@ -10,7 +10,7 @@ router.get('/rides', controllers.getAllRides)
 //get one ride
 router.get('/rides/:id', controllers.getRide)
 //update ride
-router.put('rides/:id', controllers.updateRide)
+router.put('/rides/:id', controllers.updateRide)
 // delete ride
 router.delete('/rides/:id', controllers.deleteRide)
 
@@ -21,9 +21,9 @@ router.post('/tickets', controllers.createTicket)
 //read all tickets
 router.get('/tickets', controllers.getAllTickets)
 //read single ticket
-router.get('tickets/:id', controllers.getTicket)
+router.get('/tickets/:id', controllers.getTicket)
 //update tickett
-router.put('tickets/:id', controllers.updateTicket)
+router.put('/tickets/:id', controllers.updateTicket)
 //delete ticket
 router.delete('/tickets/:id', controllers.deleteTicket)
 
