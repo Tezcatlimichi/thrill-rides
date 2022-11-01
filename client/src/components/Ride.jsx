@@ -6,6 +6,6 @@ const Ride = (props) => {
     <h1>{props.ride.name}</h1>
     <h4>{props.ride.description}</h4>
   </div>
+}
 
-
-export default Ride
+export default Ride    
