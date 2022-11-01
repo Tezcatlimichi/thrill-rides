@@ -157,9 +157,15 @@
     align-items: center;
   }
 
+  #ride-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   #ride-header{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -181,4 +187,20 @@
     margin: 3rem auto;
     
     font-size: 2rem;
+  }
+
+  #get-ticket-button{
+    font-size: 1.5rem;
+    margin: 2rem 1rem;
+    padding: .5rem 2rem;
+    color: white;
+    background-color: #FFA41C;
+
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  #get-ticket-button:hover {
+    background-color: #dd8e17dc;
   }
