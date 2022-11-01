@@ -14,7 +14,8 @@ router.put('rides/:id', controllers.updateRide)
 // delete ride
 router.delete('/rides/:id', controllers.deleteRide)
 
-//// tickets
+//// tickets crud
+
 //create ticket
 router.post('/tickets', controllers.createTicket)
 //read all tickets
