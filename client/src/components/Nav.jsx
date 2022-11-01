@@ -8,8 +8,8 @@ const Nav = () => {
         <div id='nav-content'>  
             <Link to ={`/`}><img src="/images/logo.png" alt="website logo" className='logo'/></Link>
             <div id='links-container'>
-                <NavLink to = '/' className="nav-link"> Home </NavLink>
-                <NavLink to = '/rides' className="nav-link"> Best Rides </NavLink>
+                <NavLink to = '/' className="nav-link">Home</NavLink>
+                <NavLink to = '/rides' className="nav-link">Best Rides</NavLink>
             </div>
         </div>
     </div>
