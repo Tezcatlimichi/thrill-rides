@@ -50,7 +50,7 @@ const deleteRide = async (req, res) => {
   }
 }
 /// ticket cruds
-// create ride
+// create ticket
 const createTicket = async (req, res) => {
   try {
     const ticket = await new Ticket(req.body)
@@ -62,7 +62,7 @@ const createTicket = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
-//read all rides
+//read all ticket
 const getAllTickets = async (req, res) => {
   try {
     const tickets = await Ticket.find()
