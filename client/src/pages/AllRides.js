@@ -3,15 +3,15 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Rides from '../components/AllRides'
-const BASE_URL = '/api'
+const BASE_URL = '/'
 
 const AllRides = () => {
   const [rides, setRides] = useState(null)
 
   useEffect(() => {
     const getRides = async () => {
-      const response = await axios.get(`${BASE_URL}/products`)
-      setRides(response.data)
+      const response = await axios.get(`${BASE_URL}rides`)
+      setRides(response.data.rides)
     }
 
     getRides()
