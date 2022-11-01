@@ -1,9 +1,6 @@
 import React from 'react'
 
 
- 
-const BASE_URL = '/'
-
 
 const Featured = ({ride}) => {
 
