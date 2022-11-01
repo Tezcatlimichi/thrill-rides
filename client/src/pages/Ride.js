@@ -16,6 +16,7 @@ const Ride = () => {
     const apiCall = async () => {
       const response = await axios.get(`${BASE_URL}rides/${id}`)
       setSelectedRide(response.data)
+      console.log(`Ride page : ${response}`)
     }
     apiCall()
   }, [])
@@ -23,9 +24,7 @@ const Ride = () => {
   return (
     <div>
       <section className="ride-container">
-        <Link to={`/ride/${id}`}>
-          <SelectedRide ride={selectedRide} />
-        </Link>
+        <SelectedRide ride={selectedRide} />
       </section>
       <Ticket />
     </div>
