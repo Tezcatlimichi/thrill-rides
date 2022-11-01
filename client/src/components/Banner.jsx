@@ -76,9 +76,9 @@ const Banner = () => {
 
   return(
     <div id="banner-container">
-        <div className='img-banner' id='img-banner-3'></div>
-        <div className='img-banner' id='img-banner-2'></div>
-        <div className='img-banner' id='img-banner-1'></div>
+        <img src="https://i.imgur.com/qY1UsDp.jpg" alt="Skull Island: Reign of Kong" className='img-banner' id='img-banner-3'/>
+        <img src="https://i.imgur.com/FvKptkf.jpg" alt="X² roller coaster" className='img-banner' id='img-banner-2'/> 
+        <img src="https://i.imgur.com/PlCv7on.jpg" alt="The Incredible Hulk Coaster" className='img-banner' id='img-banner-1'/> 
     </div>
   )
 }

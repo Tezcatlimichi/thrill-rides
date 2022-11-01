@@ -1,7 +1,8 @@
+@import url('http://fonts.cdnfonts.com/css/most-faster-personal-use');
+@import url('http://fonts.cdnfonts.com/css/gemsbuck-01');
 *{
   padding: 0;
     margin: 0;
-    font-family: 'Abril Fatface', cursive;
     letter-spacing: 1.5px;
   }
 
@@ -16,8 +17,8 @@
   }
 
   .logo{
-    width: 5rem;
-    height: auto;
+    width: 5.5rem;
+    height: 4rem;
     margin: 0 .5rem;
     padding: .2rem 1rem;
     gap: 1rem;
@@ -39,12 +40,21 @@
   
   
   .nav-link{
-  font-size: 1.6rem;
-  margin: .7rem 1.5rem;
-  gap: 1rem;
-  padding: .3rem;
-  text-decoration: none;
-  color: #6885bf;
+    font-family: 'Most Faster Personal Use', sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: .5rem 1rem;
+    padding: .3rem 1rem;
+    gap: 1rem;
+    text-decoration: none;
+    color: #bf7768;
+  }
+
+  .nav-link:hover{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color:#589eac;
+    color: #a83f3f;
   }
 
   /* Banner */
@@ -69,19 +79,18 @@
   
   
   .banner #img-banner-3{
-    background-image: url('https://via.placeholder.com/2000x1800/09f/fff');
-    background-size:cover;
+    background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
   }
   .banner #img-banner-2{
-    background-image: url('https://via.placeholder.com/2000x1800/ff0/000');
-    background-size:cover;
+   
+    background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
   }
   .banner #img-banner-1{
-    background-image: url('https://via.placeholder.com/2000x1800/a6f/f66');
+   
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,10 +98,20 @@
 
   /* Home Section */
   #home-section-title{
+    font-family: 'Most Faster Personal Use', sans-serif;
+    font-weight: 400;
     margin: 6rem;
-    color: #d0b88e;
+    color: #589eac;
 
-    font-size: 4.5rem;
+    font-size: 5rem;
+  }
+
+  /* Featured Ride */
+  .featured-name{
+    font-family: 'Gemsbuck 01', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: #bf7768;
   }
 
   /* Ride Page */
