@@ -22,6 +22,12 @@ const getAllRides = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
+
+// get single ride
+const getRide = async (req, res) => {
+  let selectedRide = await Ride.findById(req.params.id)
+  res.json(selectedRide)
+}
 // delete
 const deleteRide = async (req, res) => {
   try {
@@ -56,7 +62,11 @@ const getAllTickets = async (req, res) => {
     return res.status(500).send(error.message)
   }
 }
-
+// get single ticket
+const getTicket = async (req, res) => {
+  let selectedTicket = await Ticket.findById(req.params.id)
+  res.json(selectedTicket)
+}
 const deleteTicket = async (req, res) => {
   try {
     const { id } = req.params
@@ -76,5 +86,7 @@ module.exports = {
   deleteRide,
   createTicket,
   getAllTickets,
-  deleteTicket
+  deleteTicket,
+  getRide,
+  getTicket
 }
