@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 const AllRides = ({key, name, image1}) => {
+
   return (
       <div className='rides-container' key={key}>
           <h3 className='rides-names'>{name}</h3>

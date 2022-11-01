@@ -10,7 +10,7 @@ router.get('/rides', controllers.getAllRides)
 //get one ride
 router.get('/rides/:id', controllers.getRide)
 //update ride
-router.put('rides/:id', controllers.updateRide)
+router.put('/rides/:id', controllers.updateRide)
 // delete ride
 router.delete('/rides/:id', controllers.deleteRide)
 
