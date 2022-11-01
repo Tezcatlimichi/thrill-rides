@@ -142,9 +142,27 @@
 
   /* Ride Page */
 
+  #ride-header{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #ride-image{
+    width: 60%;
+    height: auto;
+  }
+
   #ride-title{
     font-size: 4rem;
     text-align: center;
 
     color: Black;
+  }
+
+  #ride-name{
+margin: 1rem;
+  }
+
+  #ride-description{
+    margin: 3rem;
   }
