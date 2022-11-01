@@ -22,6 +22,7 @@ const Ride = (props) => {
 
       <h4 id='ride-description'>{props.ride.description}</h4>
   </div>)
+
 }
 
 export default Ride
