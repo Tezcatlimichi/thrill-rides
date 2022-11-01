@@ -37,7 +37,7 @@ const Ticket = () => {
           Create a ticket
         </button>
         {formToggle && (
-          <Form action={'create'} id="" setFormToggle={setFormToggle} />
+          <Form action="create" id="" setFormToggle={setFormToggle} />
         )}
       </section>
     </div>

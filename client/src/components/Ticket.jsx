@@ -20,14 +20,20 @@ const Ticket = (props) => {
   return (
     <div>
       <button type="button" onClick={() => setFormToggle(true)}>
-        Update a ticket
+        Update ticket
       </button>
       <button onClick={handleDelete} className="delete-button">
-        Delete Tickets
+        Delete ticket
       </button>
       <h3>{props.rideName}</h3>
       <h4>{props.price}</h4>
-      {formToggle && <Form ticket_info={props} setFormToggle={setFormToggle} />}
+      {formToggle && (
+        <Form
+          action="update"
+          ticket_info={props}
+          setFormToggle={setFormToggle}
+        />
+      )}
     </div>
   )
 }
