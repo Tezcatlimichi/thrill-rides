@@ -37,7 +37,9 @@ const Home = () => {
       </section>
       <h1 id="home-section-title">Featured Ride</h1>
       <section>
-        <Featured ride={featuredRide} />
+        <Link to={`/ride/${featuredRide._id}`}>
+          <Featured ride={featuredRide} />
+        </Link>
       </section>
     </div>
   )
