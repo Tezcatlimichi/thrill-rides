@@ -18,7 +18,7 @@ const Ride = () => {
       setSelectedRide(response.data)
     }
     apiCall()
-  })
+  }, [])
 
   return (
     <div>

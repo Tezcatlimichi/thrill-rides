@@ -1,8 +1,8 @@
 import React from 'react'
 import { Ticket } from '../pages/Ticket'
 
-const Ride = ({selectedRide}) => {
-  return <div>{selectedRide.title}</div>
+const Ride = ({ ride }) => {
+  return <div>{ride.title}</div>
 }
 
 export default Ride
