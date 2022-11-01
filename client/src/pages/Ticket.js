@@ -21,7 +21,7 @@ const Ticket = () => {
         {tickets.map((ticket) => (
           <TicketArray
             key={ticket._id}
-            id={ticket._id}
+            ticketId={ticket._id}
             rideName={ticket.ride_name}
             rideId={ticket.ride_id}
             price={ticket.price}
