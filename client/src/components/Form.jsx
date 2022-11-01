@@ -17,7 +17,16 @@ const Form = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('/tickets', formState)
+    if (props.action === 'create') {
+      await axios.post('/tickets', formState)
+      props.setFormToggle(false)
+    } else if (props.action === 'update') {
+      await axios.put(`/tickets/${props.id}`, formState)
+      props.setFormToggle(false)
+    } else {
+      //delete
+      props.setFormToggle(false)
+    }
   }
 
   const handleChange = (event) => {
