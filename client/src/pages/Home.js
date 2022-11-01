@@ -31,7 +31,7 @@ const Home = () => {
       <section className="banner">
         {rides.map((ride) => (
           <Link to={`/ride/${ride._id}`}>
-            <Banner image={ride.images} />
+            <Banner image1={ride.image1} />
           </Link>
         ))}
       </section>

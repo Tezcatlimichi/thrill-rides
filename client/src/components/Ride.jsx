@@ -4,18 +4,11 @@ import { Link } from 'react-router-dom'
 const Ride = (props) => {
   console.log(props)
 
+
   return (
     <div>
       <div id="ride-header">
-        {props.ride.images.map((image) => (
-          <img
-            src={image}
-            alt={props.ride.name}
-            width="1000px"
-            height="600px"
-            id="ride-image"
-          />
-        ))}
+     <img src={props.ride.image2} alt={props.ride.name} width="1000px" height="600px" id='ride-image'/>
         <div id="ride-text-container">
           <h1 id="ride-name" className="font-1">
             {props.ride.name}
@@ -28,6 +21,7 @@ const Ride = (props) => {
         </div>
       </div>
       <h4 id="ride-description">{props.ride.description}</h4>
+
     </div>
   )
 }

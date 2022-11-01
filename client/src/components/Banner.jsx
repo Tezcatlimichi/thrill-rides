@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = ({image}) => {
+const Banner = ({image1}) => {
 
     // let bannerPosition = 1;
     // let bannerTimer = 6000;
@@ -76,7 +76,7 @@ const Banner = ({image}) => {
 
   return(
     <div id="banner-container">
-        <img src={image} alt="Skull Island: Reign of Kong" className='img-banner' id='img-banner-3'/>
+        <img src={image1} alt="Skull Island: Reign of Kong" className='img-banner' id='img-banner-3'/>
         
     </div>
   )
