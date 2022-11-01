@@ -1,10 +1,13 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import TicketArray from '../components/Ticket'
+import Form from '../components/Form'
 const BASE_URL = '/'
 
 const Ticket = () => {
+  const [formToggle, setFormToggle] = useState()
   const [tickets, setTickets] = useState([])
+
   useEffect(() => {
     const getTickets = async () => {
       const response = await axios.get(`${BASE_URL}tickets`)
@@ -30,9 +33,24 @@ const Ticket = () => {
             reservedBy={ticket.reserved_by}
           />
         ))}
+        <button type="button" onClick={() => setFormToggle(true)}>
+          Create a ticket
+        </button>
+        {formToggle && (
+          <Form action={'create'} id="" setFormToggle={setFormToggle} />
+        )}
       </section>
     </div>
   )
 }
 
 export default Ticket
+
+/*
+
+const [formToggle, setFormToggle] = useState()
+
+<button type="button" onClick={() => handleClick("create")}>Create a ticket</button>
+<button type="button" onClick={() => handleClick("update")}>Update a ticket</button>
+
+*/

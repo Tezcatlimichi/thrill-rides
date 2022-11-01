@@ -1,6 +1,5 @@
 import React from 'react'
 import SelectedRide from '../components/Ride'
-import Ticket from '../pages/Ticket'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -17,6 +16,7 @@ const Ride = () => {
       const response = await axios.get(`${BASE_URL}rides/${id}`)
       console.log(response)
       setSelectedRide(response.data)
+      console.log(`Ride page : ${response}`)
     }
     apiCall()
   }, [])
@@ -27,7 +27,9 @@ const Ride = () => {
         <Link to={`/ride/${id}`}>
           {selectedRide && <SelectedRide ride={selectedRide} />}
         </Link>
-        <Ticket />
+        <Link to={'/tickets'}>
+          <button type="button">To Tickets:</button>
+        </Link>
       </section>
     </div>
   )
