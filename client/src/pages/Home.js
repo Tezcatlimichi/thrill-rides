@@ -9,12 +9,18 @@ const BASE_URL = '/'
 
 const Home = () => {
   const [rides, setRides] = useState([])
+  const [featuredRide, setFeaturedRide] = useState({})
 
   useEffect(() => {
     const getRides = async () => {
       const response = await axios.get(`${BASE_URL}rides`)
       setRides(response.data.rides)
-      console.log(response.data)
+
+      setFeaturedRide(
+        response.data.rides[
+          Math.floor(Math.random() * response.data.rides.length - 0)
+        ]
+      )
     }
 
     getRides()
@@ -31,17 +37,7 @@ const Home = () => {
       </section>
       <h1 id="home-section-title">Featured Ride</h1>
       <section>
-        {rides.map((ride) => (
-          <Link to={`/ride/${ride._id}`}>
-            <Featured
-              key={ride._id}
-              name={ride.name}
-              description={ride.description}
-              image={ride.images}
-              ticketSales={ride.ticket_sales}
-            />
-          </Link>
-        ))}
+        <Featured ride={featuredRide} />
       </section>
     </div>
   )
