@@ -42,7 +42,7 @@ const Form = (props) => {
   return (
     <div>
       <form id="ticket-form" onSubmit={handleSubmit}>
-        <label htmlFor="reserved_by">Name:</label>
+        <label htmlFor="reserved_by">Ticket Holder: </label>
         <input
           type="text"
           id="reserved_by"
