@@ -1,10 +1,16 @@
 import React from 'react'
 
-const Featured = ({key, name, image}) => {
+
+
+const Featured = ({ride}) => {
+
+
   return(
-    <div className='featured-ride' key={key}>
-        <h3 className='featured-name'>{name}</h3>
-        <img src={image} alt={name} id='featured-image' width="1000px" height="600px"/>
+    <div className='featured-ride' >
+
+      
+        <h3 className='featured-name'>{ride.name}</h3>
+        <img src={ride.images} alt={ride.name} id='featured-image' width="1000px" height="600px"/>
     </div>
   )
 }
