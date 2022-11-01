@@ -23,12 +23,16 @@ const Home = () => {
   return (
     <div className="main">
       <section className="banner">
-        <Banner />
+        {rides.map((ride) => (
+          <Link to={`/ride/${ride._id}`}>
+            <Banner image={ride.images} />
+          </Link>
+        ))}
       </section>
       <h1 id="home-section-title">Featured Ride</h1>
       <section>
         {rides.map((ride) => (
-          <Link to={`/ride`}>
+          <Link to={`/ride/${ride._id}`}>
             <Featured
               key={ride._id}
               name={ride.name}

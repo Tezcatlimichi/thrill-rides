@@ -18,7 +18,7 @@ const AllRides = () => {
   }, [])
 
   return rides !== null ? (
-    <div id="products">
+    <div id="products" className="rides-main">
       {rides.map((ride) => (
         <Link to={`/ride/${ride._id}`}>
           <Rides
