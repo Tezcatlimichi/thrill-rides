@@ -10,7 +10,8 @@ const ticketSchema = new Schema(
     ride_id: { type: Schema.Types.ObjectId, ref: 'Ride' },
     price: { type: Number, required: true },
     quantity: { type: Number, required: true },
-    effective_date: { type: String, required: true }
+    effective_date: { type: String, required: true },
+    reserved_by: { type: String, required: true }
   },
   { timestamps: true }
 )
