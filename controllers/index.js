@@ -73,26 +73,35 @@ const getAllTickets = async (req, res) => {
 }
 // get  or read single ticket
 const getTicket = async (req, res) => {
-  let selectedTicket = await Ticket.findById(req.params.id)
-  res.json(selectedTicket)
+  try {
+    let selectedTicket = await Ticket.findById(req.params.id)
+    console.log(selectedTicket)
+    return res.json(selectedTicket)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
 }
 
 //update ticket
 const updateTicket = async (req, res) => {
-  let updateTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, {
-    new: true
-  })
-  res.json(updateTicket)
+  try {
+    let updateTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    return res.status(200).json(updateTicket)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
 }
 // delete ticket
 const deleteTicket = async (req, res) => {
   try {
     const { id } = req.params
-    const deleted = await Ride.findByIdAndDelete(id)
+    const deleted = await Ticket.findByIdAndDelete(id)
     if (deleted) {
       return res.status(200).send('Ticket deleted')
     }
-    throw new Error('Ride not found')
+    throw new Error('Ticket not found')
   } catch (error) {
     return res.status(500).send(error.message)
   }

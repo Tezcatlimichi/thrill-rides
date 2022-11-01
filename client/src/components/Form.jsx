@@ -2,7 +2,6 @@ import axios from 'axios'
 import { useState } from 'react'
 
 const Form = (props) => {
-  console.log(props)
   let initialState = props.ticket_info
     ? {
         ride_name: props.ticket_info.rideName,
@@ -24,12 +23,14 @@ const Form = (props) => {
   const [formState, setFormState] = useState(initialState)
 
   const handleSubmit = async (event) => {
+    console.log(`im firing! my action is ${props.action}`)
     event.preventDefault()
     if (props.action === 'create') {
       await axios.post('/tickets', formState)
       props.setFormToggle(false)
     } else if (props.action === 'update') {
-      await axios.put(`/tickets/${props.id}`, formState)
+      console.log('im updating')
+      await axios.put(`/tickets/${props.ticket_info.ticketId}`, formState)
       props.setFormToggle(false)
     }
   }
