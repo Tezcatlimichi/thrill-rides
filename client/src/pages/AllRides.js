@@ -25,7 +25,7 @@ const AllRides = () => {
             key={ride._id}
             id={ride._id}
             name={ride.name}
-            image={ride.images}
+            image1={ride.image1}
             ticketSales={ride.ticket_sales}
           />
         </Link>
