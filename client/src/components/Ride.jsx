@@ -10,14 +10,16 @@ const Ride = (props) => {
       <div id="ride-header">
      <img src={props.ride.image2} alt={props.ride.name} width="1000px" height="600px" id='ride-image'/>
         <div id="ride-text-container">
-          <h1 id="ride-name" className="font-1">
+          <h1 id="ride-name" className="font-2">
             {props.ride.name}
           </h1>
-          <h3>Height: {props.ride.height}</h3>
-          <h3>Companion: {props.ride.companion}</h3>
-          <h3>Ride type: {props.ride.ride_type}</h3>
-          <h3>Best For: {props.ride.best_for}</h3>
-          <h3>Accessibility: {props.ride.accessibility}</h3>
+          <div className='ride-info'> 
+          <h3 className='ride-info-text'>Height: {props.ride.height}</h3>
+          <h3 className='ride-info-text'>Companion: {props.ride.companion}</h3>
+          <h3 className='ride-info-text'>Ride type: {props.ride.ride_type}</h3>
+          <h3 className='ride-info-text'>Best For: {props.ride.best_for}</h3>
+          <h3 className='ride-info-text'>Accessibility: {props.ride.accessibility}</h3>
+          </div>
           <Link to={'/tickets'}>
             <button type="button" id="get-ticket-button">
               Get Tickets
