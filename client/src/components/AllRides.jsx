@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const AllRides = ({key, name, image3}) => {
   
   function reveal() {
@@ -19,6 +20,9 @@ const AllRides = ({key, name, image3}) => {
   }
 
   window.addEventListener('scroll', reveal)
+
+
+
   return (
       <div className='rides-container reveal' key={key}>
           <h3 className='rides-names'>{name}</h3>
