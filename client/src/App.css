@@ -403,7 +403,7 @@ background: linear-gradient(241deg, rgba(255,255,255,0.908000700280112) 0%, rgba
 
   #create-button{
     position: relative;
-    top: 16rem;
+    top: 10rem;
     left: 240px;
     padding: .3rem 1rem;
     border-radius: 6px;

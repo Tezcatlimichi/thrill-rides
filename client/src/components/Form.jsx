@@ -24,17 +24,20 @@ const Form = (props) => {
 
   const [formState, setFormState] = useState(initialState)
 
+ 
   const handleSubmit = async (event) => {
     event.preventDefault()
     if (props.action === 'create') {
       await axios.post(`${BASE_URL}tickets`, formState)
       props.setFormToggle(false)
+     
     } else if (props.action === 'update') {
       await axios.put(
         `${BASE_URL}tickets/${props.ticket_info.ticketId}`,
         formState
       )
       props.setFormToggle(false)
+      
     }
   }
 
