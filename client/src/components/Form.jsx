@@ -3,6 +3,9 @@ import { useState } from 'react'
 const BASE_URL = '/'
 
 const Form = (props) => {
+  const handleRefresh = () => {
+    window.location.reload(false)
+  }
   let isCreate
   let initialState = props.ticket_info
     ? {
@@ -30,14 +33,13 @@ const Form = (props) => {
     if (props.action === 'create') {
       await axios.post(`${BASE_URL}tickets`, formState)
       props.setFormToggle(false)
-     
     } else if (props.action === 'update') {
       await axios.put(
         `${BASE_URL}tickets/${props.ticket_info.ticketId}`,
         formState
       )
       props.setFormToggle(false)
-      
+      handleRefresh()
     }
   }
 

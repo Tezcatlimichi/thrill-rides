@@ -28,6 +28,8 @@ const Ticket = (props) => {
       </button>
       </div>
       <h3>Ride Name: {props.rideName}</h3>
+      <h4>Person Name: {props.reservedBy}</h4>
+      <h4>Date: {props.effectiveDate}</h4>
       <h4>Price: ${props.price}</h4>
       {formToggle && (
         <Form
