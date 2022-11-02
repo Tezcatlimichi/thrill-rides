@@ -54,7 +54,15 @@ const deleteRide = async (req, res) => {
 const createTicket = async (req, res) => {
   try {
     const ticket = await new Ticket(req.body)
-    await ticket.save()
+    const rideCheck = await Ride.find({ name: 'Skull Island: Reign of Kong' })
+    console.log(rideCheck)
+    if (rideCheck.length > 0) {
+      console.log('hey')
+      return res.json(ticket)
+    } else {
+      console.log('aww')
+    }
+    //await ticket.save()
     return res.status(201).json({
       ticket
     })

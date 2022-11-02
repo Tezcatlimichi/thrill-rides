@@ -49,6 +49,17 @@ const Form = (props) => {
   return (
     <div>
       <form id="ticket-form" onSubmit={handleSubmit}>
+        {isCreate && (
+          <div className="form-subject-container">
+            <label htmlFor="ride_name">Ride Name: </label>
+            <input
+              type="text"
+              id="ride_name"
+              value={formState.ride_name}
+              onChange={handleChange}
+            />
+          </div>
+        )}
         <div className="form-subject-container">
           <label htmlFor="reserved_by">Name:</label>
           <input
