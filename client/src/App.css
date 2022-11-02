@@ -24,11 +24,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,0.908000700280112) 0%, rgba(43,43,43,0.8799894957983193) 100%);
   }
 
   .logo{
-    width: 5.5rem;
-    height: 4rem;
+    width: 6rem;
+    height: 4.5rem;
     margin: 0 .5rem;
     padding: .2rem 1rem;
     gap: 1rem;
@@ -43,7 +45,8 @@
     align-items: center;
     
     border-bottom: 2px solid rgb(200, 198, 198);
-    margin: 0 1%;
+    
+    background-color: #fefefe;
    
     
   }
@@ -149,8 +152,6 @@
   }
   
 
-  
-
 
   /* Home Section */
 #home-intro-text{
@@ -212,6 +213,8 @@
     align-items: center;
     margin-top: 0;
     overflow-x: hidden;
+    background: rgb(255,255,255);
+background: linear-gradient(241deg, rgba(255,255,255,0.908000700280112) 0%, rgba(139,139,139,0.8799894957983193) 100%);
   }
 
   .rides-container{
@@ -277,6 +280,7 @@
     flex-direction: column;
     align-items: center;
    margin: 0 auto;
+   padding: 0 2rem;
   }
 
   #ride-header{
@@ -289,6 +293,7 @@
   #ride-image{
     width: 60%;
     height: auto;
+    border-radius: 6px;
     box-shadow: 6px 4px 5px gray;
     margin: .5rem;
   }
@@ -314,6 +319,7 @@
     text-align: center;
     width: 50%;
     margin: 3rem auto;
+    padding: 3rem 0;
     
     font-size: 2rem;
     color:#7586a3;
