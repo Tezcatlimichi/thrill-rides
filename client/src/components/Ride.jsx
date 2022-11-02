@@ -20,7 +20,7 @@ const Ride = (props) => {
           <h3 className='ride-info-text'>🙅 &nbsp;Best For: {props.ride.best_for}</h3>
           <h3 className='ride-info-text'>♿ &nbsp;Accessibility: {props.ride.accessibility}</h3>
           </div>
-          <Link to={'/tickets'}>
+          <Link to={'/all/tickets'}>
             <button type="button" id="get-ticket-button">
               Get Tickets
             </button>
