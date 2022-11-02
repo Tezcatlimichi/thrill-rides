@@ -1,9 +1,10 @@
 @import url('http://fonts.cdnfonts.com/css/most-faster-personal-use');
 @import url('http://fonts.cdnfonts.com/css/gemsbuck-01');
+
+
 *{
-  padding: 0;
+    padding: 0;
     margin: 0;
-    letter-spacing: 1.5px;
   }
 
   .font-1{
@@ -62,48 +63,94 @@
   .nav-link:hover{
     border: 1px solid transparent;
     border-radius: 5px;
-    background-color:#589eac;
-    color: #a83f3f;
+    color: #989494;
   }
 
-  /* Banner */
-  .banner{
-    margin: 0 auto;
-    display: flex;
+  /* carousel */
+  
+  ::-webkit-scrollbar, .scroll-images::-webkit-scrollbar{
+    width: 14px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track, .scroll-images::-webkit-scrollbar-track{
+    background: #f2f2f2;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb, .scroll-images::-webkit-scrollbar-thumb{
+    background: #A3B5D5;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover, .scroll-images::-webkit-scrollbar-thumb:hover{
+    background: #7586a3;
+  }
+  
+  #scrLeft, #scrRight{
+    background-image: url('../public/images/arrow.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
     position: relative;
-    width: 100%;
-    height: 92vh;
-    overflow: hidden;
-  }
-  .banner .img-banner {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    transition: all ease-in-out 500ms;
-    -webkit-transition: all ease-in-out 500ms;
-    -moz-transition: all ease-in-out 500ms;
-    -o-transition: all ease-in-out 500ms;
+    top: 380px;
+    width: 7rem;
+    height: 7rem;
+    
+    cursor: pointer;
+    
+    filter: saturate(500%) contrast(800%) brightness(500%) 
+    invert(60%) sepia(80%) hue-rotate(180deg); 
   }
   
+  #scrLeft:hover, #scrRight:hover{
+    filter: saturate(500%) contrast(800%) brightness(500%) 
+    invert(50%) sepia(70%) hue-rotate(180deg); 
+  }
   
-  .banner #img-banner-3{
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  #scrLeft{
+    display:flex;
+    transform: scaleX(-1);
   }
-  .banner #img-banner-2{
-   
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  
+  #inline{
+    display: flex;
+    justify-content: center;
+    width:100%;
   }
-  .banner #img-banner-1{
-   
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  
+  .banner-container{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 53rem;
+    width: 80%;
+    margin-bottom: 10rem;
+    
+    
   }
+  
+  .banner-ride{
+    width: 99rem;
+  }
+
+ 
+  .inline-snap{
+    scroll-snap-type:inline mandatory;
+    scroll-padding-inline: 1rem;
+    transition:  0.4s ease-in-out
+  }
+  
+  .inline-snap > * {
+    scroll-snap-align: start;
+    transition: 0.4s ease-in;
+  }
+  
+
+  
+
 
   /* Home Section */
   #home-section-title{
@@ -116,6 +163,29 @@
   }
 
   /* Featured Ride */
+  .reveal-title{
+    position: relative;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .reveal-image{
+    position: relative;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 1.5s all ease;
+  }
+
+  
+  .reveal-title.active, .reveal-image.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+#featured-container{
+  margin-bottom: 5rem;
+}
+
   .featured-name{
     font-family: 'Gemsbuck 01', sans-serif;
     text-align: center;
@@ -123,30 +193,67 @@
     color: #bf7768;
   }
 
+  #featured-image{
+    box-shadow: 6px 4px 5px gray;
+  }
   /* Rides Page */
 
   .rides-main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
+    overflow-x: hidden;
   }
 
   .rides-container{
-    margin: 2rem 1rem;
+    margin: 4rem 1rem;
     padding: 1rem 1rem;
+  }
+
+  .rides-text{
+    margin: 5rem 0;
+    width: 50%;
+    font-size: 3rem;
+    text-align: center;
+
+    color: #6b7ea0;
+  }
+
+  .rides-arrow{
+    font-size: 6rem;
+    color: #6b7ea0;
   }
 
   .rides-names{
     font-family: 'Gemsbuck 01', sans-serif;
     text-align: center;
     font-size: 3rem;
-    color: #dcd98c;
+    color: #6b7ea0;
   }
 
   .rides-images{
     margin: 1rem 0;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 6px 4px 5px gray;
   
+  }
+
+  .reveal{
+    position: relative;
+    transform: translateX(500px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+
+  .reveal:nth-of-type(2n){
+    transform: translateX(-500px);
+  }
+
+  
+  .reveal.active{
+    transform: translateX(0);
+    opacity: 1;
   }
 
   /* Ride Page */
@@ -161,22 +268,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   margin: 0 auto;
   }
 
   #ride-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background-color: #f6f6f6;
+    padding-bottom: 3rem;
   }
 
   #ride-image{
     width: 60%;
     height: auto;
+    box-shadow: 6px 4px 5px gray;
+    margin: .5rem;
   }
 
   #ride-name{
     margin: 2rem 2rem 1rem 1rem;
-    color: Black;
+    color:#6b7ea0;
     font-size: 3rem;
     
   }
@@ -187,6 +298,7 @@
     margin: 3rem auto;
     
     font-size: 2rem;
+    color:#7586a3;
   }
 
   #get-ticket-button{

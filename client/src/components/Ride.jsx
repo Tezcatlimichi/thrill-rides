@@ -10,7 +10,7 @@ const Ride = (props) => {
       <div id="ride-header">
      <img src={props.ride.image2} alt={props.ride.name} width="1000px" height="600px" id='ride-image'/>
         <div id="ride-text-container">
-          <h1 id="ride-name" className="font-1">
+          <h1 id="ride-name" className="font-2">
             {props.ride.name}
           </h1>
           <h3>Height: {props.ride.height}</h3>
