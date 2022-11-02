@@ -45,12 +45,3 @@ const Ticket = () => {
 }
 
 export default Ticket
-
-/*
-
-const [formToggle, setFormToggle] = useState()
-
-<button type="button" onClick={() => handleClick("create")}>Create a ticket</button>
-<button type="button" onClick={() => handleClick("update")}>Update a ticket</button>
-
-*/
