@@ -326,3 +326,32 @@
   #get-ticket-button:hover {
     background-color: #dd8e17dc;
   }
+
+  #ticket-form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 40rem;
+  height: 30rem;
+
+  border-radius: 10px;
+  border: 2px solid rgb(147, 147, 147);
+  }
+
+  .form-subject-container{
+    margin: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(147, 147, 147);
+  }
+
+  .form-button{
+    position:relative;
+    top: 5%;
+   
+    color: white;
+    background-color: #768ebe;
+    border-radius: 5px;
+    margin: 0 10rem;
+    padding: .5rem 3rem;
+    border: 2px solid rgb(116, 115, 115)
+  }
