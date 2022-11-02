@@ -12,7 +12,6 @@ const Ticket = () => {
     const getTickets = async () => {
       const response = await axios.get(`${BASE_URL}tickets`)
       setTickets(response.data.tickets)
-      console.log(response.data.tickets)
     }
 
     getTickets()
@@ -45,12 +44,3 @@ const Ticket = () => {
 }
 
 export default Ticket
-
-/*
-
-const [formToggle, setFormToggle] = useState()
-
-<button type="button" onClick={() => handleClick("create")}>Create a ticket</button>
-<button type="button" onClick={() => handleClick("update")}>Update a ticket</button>
-
-*/
