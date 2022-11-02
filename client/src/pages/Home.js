@@ -72,7 +72,16 @@ const Home = () => {
 
         <span id="scrRight" onClick={scrRight}></span>
       </div>
-
+      <h3 id="home-intro-text">
+        Welcome to Thrill Rides. If you are looking for the most X-treme, jaw
+        dropping, heart stopping rides I the USA, you have come to the right
+        spot. Every week we do an extensive market research to bring to you the
+        latest information on the most popular rides out there. Our rigorous
+        research involve park ticket sales, queue lines wait times, an weekly
+        questionnaires, so we can make sure we are giving you the latests, and
+        most up to date info. Once we gather all data, we chose the top rides,
+        with the option of buying your tickets all in one spot.
+      </h3>
       <h1 id="home-section-title" className="reveal-title">
         Featured Ride
       </h1>
