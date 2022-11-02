@@ -49,28 +49,36 @@ const Form = (props) => {
   return (
     <div>
       <form id="ticket-form" onSubmit={handleSubmit}>
-        <label htmlFor="reserved_by">Ticket Holder: </label>
-        <input
-          type="text"
-          id="reserved_by"
-          value={formState.reserved_by}
-          onChange={handleChange}
-        />
-        <label htmlFor="effective_date">Date:</label>
-        <input
-          type="date"
-          id="effective_date"
-          value={formState.effective_date}
-          onChange={handleChange}
-        />
-        <label htmlFor="quantity">Quantity:</label>
-        <input
-          type="range"
-          id="quantity"
-          value={formState.quantity}
-          onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
+        <div className="form-subject-container">
+          <label htmlFor="reserved_by">Name:</label>
+          <input
+            type="text"
+            id="reserved_by"
+            value={formState.reserved_by}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-subject-container">
+          <label htmlFor="effective_date">Date:</label>
+          <input
+            type="date"
+            id="effective_date"
+            value={formState.effective_date}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-subject-container">
+          <label htmlFor="quantity">Quantity:</label>
+          <input
+            type="range"
+            id="quantity"
+            value={formState.quantity}
+            onChange={handleChange}
+          />
+        </div>
+        <button type="submit" className="form-button">
+          Submit
+        </button>
       </form>
     </div>
   )
