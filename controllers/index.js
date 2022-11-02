@@ -54,15 +54,26 @@ const deleteRide = async (req, res) => {
 const createTicket = async (req, res) => {
   try {
     const ticket = await new Ticket(req.body)
-    const rideCheck = await Ride.find({ name: 'Skull Island: Reign of Kong' })
-    console.log(rideCheck)
-    if (rideCheck.length > 0) {
-      console.log('hey')
-      return res.json(ticket)
+    const ride = await Ride.findOne({ name: ticket.ride_name })
+    if (ride) {
+      ticket.ride_id = ride._id
+      switch (ticket.ride_name) {
+        case 'Skull Island: Reign of Kong':
+          ticket.price = 100
+          break
+        case 'The Incredible Hulk Coaster':
+          ticket.price = 150
+          break
+        case 'X²':
+          ticket.price = 80
+          break
+        default:
+          ticket.price = 1
+      }
     } else {
-      console.log('aww')
+      throw new Error('Ride not found')
     }
-    //await ticket.save()
+    await ticket.save()
     return res.status(201).json({
       ticket
     })

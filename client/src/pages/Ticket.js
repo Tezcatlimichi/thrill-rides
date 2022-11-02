@@ -12,7 +12,6 @@ const Ticket = () => {
     const getTickets = async () => {
       const response = await axios.get(`${BASE_URL}tickets`)
       setTickets(response.data.tickets)
-      console.log(response.data.tickets)
     }
 
     getTickets()
