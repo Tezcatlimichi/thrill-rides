@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 
 const Form = (props) => {
+  let isCreate
   let initialState = props.ticket_info
     ? {
         ride_name: props.ticket_info.rideName,
@@ -37,6 +38,12 @@ const Form = (props) => {
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
+  }
+
+  if (props.action === 'create') {
+    isCreate = true
+  } else {
+    isCreate = false
   }
 
   return (
