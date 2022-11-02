@@ -14,11 +14,11 @@ const Ride = (props) => {
             {props.ride.name}
           </h1>
           <div className='ride-info'> 
-          <h3 className='ride-info-text'>Height: {props.ride.height}</h3>
-          <h3 className='ride-info-text'>Companion: {props.ride.companion}</h3>
-          <h3 className='ride-info-text'>Ride type: {props.ride.ride_type}</h3>
-          <h3 className='ride-info-text'>Best For: {props.ride.best_for}</h3>
-          <h3 className='ride-info-text'>Accessibility: {props.ride.accessibility}</h3>
+          <h3 className='ride-info-text'>📏 &nbsp;Height: {props.ride.height}</h3>
+          <h3 className='ride-info-text'>👪 &nbsp;Companion: {props.ride.companion}</h3>
+          <h3 className='ride-info-text'>🎢 &nbsp;Ride type: {props.ride.ride_type}</h3>
+          <h3 className='ride-info-text'>🙅 &nbsp;Best For: {props.ride.best_for}</h3>
+          <h3 className='ride-info-text'>♿ &nbsp;Accessibility: {props.ride.accessibility}</h3>
           </div>
           <Link to={'/tickets'}>
             <button type="button" id="get-ticket-button">
