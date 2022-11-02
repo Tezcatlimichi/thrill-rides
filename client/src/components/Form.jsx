@@ -91,7 +91,7 @@ const Form = (props) => {
         <div className="form-subject-container">
           <label htmlFor="quantity">Quantity:</label>
           <input
-            type="range"
+            type="number"
             id="quantity"
             value={formState.quantity}
             onChange={handleChange}
