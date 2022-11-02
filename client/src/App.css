@@ -292,6 +292,16 @@
     
   }
 
+  .ride-info{
+    margin: 3rem 0;
+  }
+
+  .ride-info-text{
+    padding: .4rem 0;
+    font-size: 1.4rem;
+    color: #6b7ea0;
+  }
+
   #ride-description{
     text-align: center;
     width: 50%;
