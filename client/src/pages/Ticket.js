@@ -32,7 +32,11 @@ const Ticket = () => {
             reservedBy={ticket.reserved_by}
           />
         ))}
-        <button type="button" onClick={() => setFormToggle(true)}>
+        <button
+          id="create-button"
+          type="button"
+          onClick={() => setFormToggle(true)}
+        >
           Create a ticket
         </button>
         {formToggle && (

@@ -18,15 +18,17 @@ const Ticket = (props) => {
   }
 
   return (
-    <div>
-      <button type="button" onClick={() => setFormToggle(true)}>
+    <div id='ticket-content'>
+      <div className='ticket-buttons'>
+      <button id='update-button' type="button" onClick={() => setFormToggle(true)}>
         Update ticket
       </button>
-      <button onClick={handleDelete} className="delete-button">
+      <button id='delete-button' onClick={handleDelete} className="delete-button">
         Delete ticket
       </button>
-      <h3>{props.rideName}</h3>
-      <h4>{props.price}</h4>
+      </div>
+      <h3>Ride Name: {props.rideName}</h3>
+      <h4>Price: ${props.price}</h4>
       {formToggle && (
         <Form
           action="update"
